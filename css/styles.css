@@ -1,0 +1,84 @@
+/* Temel stiller */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  max-width: 80%;
+}
+
+h1 {
+  margin-bottom: 20px;
+  white-space: nowrap; /* Satır sonu gelince kelimeleri bölmeyi engeller */
+}
+
+input[type="text"],
+button {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  margin-bottom: 10px;
+  width: 100%; /* Metin kutusu ve buton genişliği iki katına çıkarıldı */
+}
+
+input[type="text"] {
+  margin-bottom: 10px; /* Metin kutusu ve buton arasında boşluk bırakmak için */
+}
+
+button {
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.output a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.output a:hover {
+  text-decoration: underline;
+}
+
+.github-link {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.github-link img {
+  filter: invert(1);
+  width: 100px;
+  height: auto;
+}
+
+/* Mobil ekranlar için medya sorgusu */
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  input[type="text"],
+  button {
+    width: calc(100%); /* Metin kutusu ve buton genişliği eşitlenecek, kenar boşlukları da dikkate alınıyor */
+    margin-bottom: 10px;
+  }
+}
