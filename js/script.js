@@ -13,7 +13,7 @@ function removeEmojis() {
   outputLink.innerHTML = `<a href="http://${removedEmojis}" target="_blank">${removedEmojis}</a>`;
   outputLink.addEventListener('click', function(event) {
     event.preventDefault();
-    window.open(`http://${removedEmojis}`, '_blank');
+    window.open(`${removedEmojis}`, '_blank');
   });
 }
 
