@@ -1,5 +1,5 @@
 function removeEmojisOnEnter(event) {
-  if (event.keyCode === 13) { // Enter tuşu için keyCode kontrolü
+  if (event.keyCode === 13) { // Enter key
     removeEmojis();
   }
 }
@@ -10,11 +10,11 @@ function removeEmojis() {
   const removedEmojis = inputText.replace(regex, '');
   const outputLink = document.getElementById('outputLink');
 
-  outputLink.innerHTML = `<a href="http://${removedEmojis}" target="_blank">${removedEmojis}</a>`;
-  outputLink.addEventListener('click', function(event) {
-    event.preventDefault();
-    window.open(`http://${removedEmojis}`, '_blank');
-  });
+  if (removedEmojis) {
+    outputLink.innerHTML = `<a href="${removedEmojis}" target="_blank">${removedEmojis}</a>`;
+  } else {
+    outputLink.textContent = 'Lütfen geçerli bir link girin.';
+  }
 }
 
 document.getElementById('inputText').addEventListener('keypress', removeEmojisOnEnter);
