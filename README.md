@@ -1,4 +1,4 @@
 # AHS-Emoji-Kaldirma
 Girilen sansürlü (emojili) linki temizleyen web sitesi.
 
-**Denemek için:** [ahstr.live](http://ahstr.live/emoji "AHSTR.live")
+**Denemek için:** [ahsdev.com.tr](http://ahsdev.com.tr/emoji "ahsdev.com.tr")
